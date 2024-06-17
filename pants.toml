@@ -38,6 +38,11 @@ enable_resolves = true
 
 resolves = { python-default = "python-default.lock"}
 
+[python.resolves_to_only_binary]
+python-default = [
+  "ansicolors",
+]
+
 [python-bootstrap]
 # We search for interpreters both on the $PATH and in the `$(pyenv root)/versions` folder.
 #  If you're using macOS, you may want to leave off the <PATH> entry to avoid using the
